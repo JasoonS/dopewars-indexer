@@ -1,0 +1,60 @@
+name: DopeWars
+networks:
+- id: 1
+  start_block: 0
+  contracts:
+  - name: DopeWarsLoot
+    address:
+    - 0x8707276DF042E89669d69A177d3DA7dC78bd8723
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)
+    - event: ApprovalForAll(address indexed owner, address indexed operator, bool approved)
+    - event: DelegateChanged(address indexed delegator, address indexed fromDelegate, address indexed toDelegate)
+    - event: DelegateVotesChanged(address indexed delegate, uint256 previousBalance, uint256 newBalance)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
+  - name: Paper
+    address:
+    - 0x7aE1D57b58fA6411F32948314BadD83583eE0e8C
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed spender, uint256 value)
+    - event: DelegateChanged(address indexed delegator, address indexed fromDelegate, address indexed toDelegate)
+    - event: DelegateVotesChanged(address indexed delegate, uint256 previousBalance, uint256 newBalance)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: Snapshot(uint256 id)
+    - event: Transfer(address indexed from, address indexed to, uint256 value)
+  - name: Initiator
+    address:
+    - 0x7aa8e897d712CFB9C7cb6B37634A1C4d21181c8B
+    handler: src/EventHandlers.ts
+    events:
+    - event: Opened(uint256 id)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+- id: 10
+  start_block: 0
+  contracts:
+  - name: SwapMeet
+    address:
+    - 0x0E55e1913C50e015e0F60386ff56A4Bfb00D7110
+    handler: src/EventHandlers.ts
+    events:
+    - event: ApprovalForAll(address indexed account, address indexed operator, bool approved)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: SetRle(uint256 id)
+    - event: TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)
+    - event: TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)
+    - event: URI(string value, uint256 indexed id)
+  - name: Hustler
+    address:
+    - 0xDbfEaAe58B6dA8901a8a40ba0712bEB2EE18368E
+    handler: src/EventHandlers.ts
+    events:
+    - event: AddRles(uint8 part, uint256 len)
+    - event: ApprovalForAll(address indexed account, address indexed operator, bool approved)
+    - event: MetadataUpdate(uint256 id)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: TransferBatch(address indexed operator, address indexed from, address indexed to, uint256[] ids, uint256[] values)
+    - event: TransferSingle(address indexed operator, address indexed from, address indexed to, uint256 id, uint256 value)
+    - event: URI(string value, uint256 indexed id)

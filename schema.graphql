@@ -1,0 +1,265 @@
+type EventsSummary {
+  id: ID!
+  dopeWarsLoot_Approval: [DopeWarsLoot_Approval!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_ApprovalCount: BigInt!
+  dopeWarsLoot_ApprovalForAll: [DopeWarsLoot_ApprovalForAll!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_ApprovalForAllCount: BigInt!
+  dopeWarsLoot_DelegateChanged: [DopeWarsLoot_DelegateChanged!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_DelegateChangedCount: BigInt!
+  dopeWarsLoot_DelegateVotesChanged: [DopeWarsLoot_DelegateVotesChanged!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_DelegateVotesChangedCount: BigInt!
+  dopeWarsLoot_OwnershipTransferred: [DopeWarsLoot_OwnershipTransferred!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_OwnershipTransferredCount: BigInt!
+  dopeWarsLoot_Transfer: [DopeWarsLoot_Transfer!]! @derivedFrom(field: "eventsSummary")
+  dopeWarsLoot_TransferCount: BigInt!
+  hustler_AddRles: [Hustler_AddRles!]! @derivedFrom(field: "eventsSummary")
+  hustler_AddRlesCount: BigInt!
+  hustler_ApprovalForAll: [Hustler_ApprovalForAll!]! @derivedFrom(field: "eventsSummary")
+  hustler_ApprovalForAllCount: BigInt!
+  hustler_MetadataUpdate: [Hustler_MetadataUpdate!]! @derivedFrom(field: "eventsSummary")
+  hustler_MetadataUpdateCount: BigInt!
+  hustler_OwnershipTransferred: [Hustler_OwnershipTransferred!]! @derivedFrom(field: "eventsSummary")
+  hustler_OwnershipTransferredCount: BigInt!
+  hustler_TransferBatch: [Hustler_TransferBatch!]! @derivedFrom(field: "eventsSummary")
+  hustler_TransferBatchCount: BigInt!
+  hustler_TransferSingle: [Hustler_TransferSingle!]! @derivedFrom(field: "eventsSummary")
+  hustler_TransferSingleCount: BigInt!
+  hustler_URI: [Hustler_URI!]! @derivedFrom(field: "eventsSummary")
+  hustler_URICount: BigInt!
+  initiator_Opened: [Initiator_Opened!]! @derivedFrom(field: "eventsSummary")
+  initiator_OpenedCount: BigInt!
+  initiator_OwnershipTransferred: [Initiator_OwnershipTransferred!]! @derivedFrom(field: "eventsSummary")
+  initiator_OwnershipTransferredCount: BigInt!
+  paper_Approval: [Paper_Approval!]! @derivedFrom(field: "eventsSummary")
+  paper_ApprovalCount: BigInt!
+  paper_DelegateChanged: [Paper_DelegateChanged!]! @derivedFrom(field: "eventsSummary")
+  paper_DelegateChangedCount: BigInt!
+  paper_DelegateVotesChanged: [Paper_DelegateVotesChanged!]! @derivedFrom(field: "eventsSummary")
+  paper_DelegateVotesChangedCount: BigInt!
+  paper_OwnershipTransferred: [Paper_OwnershipTransferred!]! @derivedFrom(field: "eventsSummary")
+  paper_OwnershipTransferredCount: BigInt!
+  paper_Snapshot: [Paper_Snapshot!]! @derivedFrom(field: "eventsSummary")
+  paper_SnapshotCount: BigInt!
+  paper_Transfer: [Paper_Transfer!]! @derivedFrom(field: "eventsSummary")
+  paper_TransferCount: BigInt!
+  swapMeet_ApprovalForAll: [SwapMeet_ApprovalForAll!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_ApprovalForAllCount: BigInt!
+  swapMeet_OwnershipTransferred: [SwapMeet_OwnershipTransferred!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_OwnershipTransferredCount: BigInt!
+  swapMeet_SetRle: [SwapMeet_SetRle!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_SetRleCount: BigInt!
+  swapMeet_TransferBatch: [SwapMeet_TransferBatch!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_TransferBatchCount: BigInt!
+  swapMeet_TransferSingle: [SwapMeet_TransferSingle!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_TransferSingleCount: BigInt!
+  swapMeet_URI: [SwapMeet_URI!]! @derivedFrom(field: "eventsSummary")
+  swapMeet_URICount: BigInt!
+}
+
+type DopeWarsLoot_Approval {
+  id: ID!
+  owner: String!
+  approved: String!
+  tokenId: BigInt!
+  eventsSummary: String!
+}
+
+type DopeWarsLoot_ApprovalForAll {
+  id: ID!
+  owner: String!
+  operator: String!
+  approved: Boolean!
+  eventsSummary: String!
+}
+
+type DopeWarsLoot_DelegateChanged {
+  id: ID!
+  delegator: String!
+  fromDelegate: String!
+  toDelegate: String!
+  eventsSummary: String!
+}
+
+type DopeWarsLoot_DelegateVotesChanged {
+  id: ID!
+  delegate: String!
+  previousBalance: BigInt!
+  newBalance: BigInt!
+  eventsSummary: String!
+}
+
+type DopeWarsLoot_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+  eventsSummary: String!
+}
+
+type DopeWarsLoot_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  tokenId: BigInt!
+  eventsSummary: String!
+}
+
+type Hustler_AddRles {
+  id: ID!
+  part: BigInt!
+  len: BigInt!
+  eventsSummary: String!
+}
+
+type Hustler_ApprovalForAll {
+  id: ID!
+  account: String!
+  operator: String!
+  approved: Boolean!
+  eventsSummary: String!
+}
+
+type Hustler_MetadataUpdate {
+  id: ID!
+  event_id: BigInt!
+  eventsSummary: String!
+}
+
+type Hustler_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+  eventsSummary: String!
+}
+
+type Hustler_TransferBatch {
+  id: ID!
+  operator: String!
+  from: String!
+  to: String!
+  ids: [BigInt!]!
+  values: [BigInt!]!
+  eventsSummary: String!
+}
+
+type Hustler_TransferSingle {
+  id: ID!
+  operator: String!
+  from: String!
+  to: String!
+  event_id: BigInt!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type Hustler_URI {
+  id: ID!
+  value: String!
+  event_id: BigInt!
+  eventsSummary: String!
+}
+
+type Initiator_Opened {
+  id: ID!
+  event_id: BigInt!
+  eventsSummary: String!
+}
+
+type Initiator_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+  eventsSummary: String!
+}
+
+type Paper_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type Paper_DelegateChanged {
+  id: ID!
+  delegator: String!
+  fromDelegate: String!
+  toDelegate: String!
+  eventsSummary: String!
+}
+
+type Paper_DelegateVotesChanged {
+  id: ID!
+  delegate: String!
+  previousBalance: BigInt!
+  newBalance: BigInt!
+  eventsSummary: String!
+}
+
+type Paper_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+  eventsSummary: String!
+}
+
+type Paper_Snapshot {
+  id: ID!
+  event_id: BigInt!
+  eventsSummary: String!
+}
+
+type Paper_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type SwapMeet_ApprovalForAll {
+  id: ID!
+  account: String!
+  operator: String!
+  approved: Boolean!
+  eventsSummary: String!
+}
+
+type SwapMeet_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+  eventsSummary: String!
+}
+
+type SwapMeet_SetRle {
+  id: ID!
+  event_id: BigInt!
+  eventsSummary: String!
+}
+
+type SwapMeet_TransferBatch {
+  id: ID!
+  operator: String!
+  from: String!
+  to: String!
+  ids: [BigInt!]!
+  values: [BigInt!]!
+  eventsSummary: String!
+}
+
+type SwapMeet_TransferSingle {
+  id: ID!
+  operator: String!
+  from: String!
+  to: String!
+  event_id: BigInt!
+  value: BigInt!
+  eventsSummary: String!
+}
+
+type SwapMeet_URI {
+  id: ID!
+  value: String!
+  event_id: BigInt!
+  eventsSummary: String!
+}
