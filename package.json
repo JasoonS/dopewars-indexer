@@ -9,6 +9,7 @@
     "codegen": "envio codegen",
     "dev": "envio dev",
     "test": "pnpm mocha",
+    "disable-hasura": "./hack/no-hasura-mode/no-hasura.sh",
     "start": "ts-node generated/src/Index.bs.js"
   },
   "devDependencies": {
